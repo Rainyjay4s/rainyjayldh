@@ -60,4 +60,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://rainyjayldh.vercel.app//sitemap.xml
+Sitemap: https://rainyjayldh.vercel.app/sitemap.xml
