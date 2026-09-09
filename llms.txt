@@ -1,0 +1,18 @@
+# 이동희 ㅣ Practical AI Education
+> AI를 배우는 순간, 업무의 결과가 달라집니다
+
+## 핵심 페이지
+- [메인 페이지](https://rainyjayldh.vercel.app/): 기업·공공기관을 위한 실무 중심 생성형 AI 교육과 강사 소개
+
+## 교육 내용
+- 생성형 AI 활용과 업무 자동화
+- AI 홍보 콘텐츠 제작
+- 실전 프롬프트 및 기획서 완성
+- ChatGPT, Google Gemini, NotebookLM, Google Flow, CapCut, SUNO AI 활용
+- 개념 이해 → 실습 → 실시간 피드백 → 현장 적용 방식
+
+## 문의
+- 이메일: arainge0215@gmail.com
+- 전화: 010-7700-6201
+- 네이버 블로그: https://blog.naver.com/rainyjay4s
+- 홈페이지: https://rainyjayldh.vercel.app/

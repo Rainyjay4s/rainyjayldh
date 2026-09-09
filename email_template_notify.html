@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AI 교육 문의 접수</title></head>
+<body style="margin:0;background:#f5f7f5;color:#171b1d;font-family:Arial,'Malgun Gothic',sans-serif;line-height:1.6;">
+  <div style="max-width:680px;margin:0 auto;padding:28px 16px;">
+    <div style="background:#171b1d;color:#fff;padding:24px 26px;">
+      <div style="font-size:11px;letter-spacing:2px;color:#d7f25e;">PRACTICAL AI EDUCATION</div>
+      <h1 style="font-size:24px;margin:10px 0 0;">새로운 교육 문의가 접수되었습니다.</h1>
+    </div>
+    <div style="background:#fff;padding:28px 26px;margin-top:12px;">
+      <table role="presentation" style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr><td style="width:132px;padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">이름</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{from_name}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">이메일</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{from_email}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">연락처</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{phone}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">소속</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{company}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">문의 유형</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{inquiry_type}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">접수 시각</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{submitted_at}}</td></tr>
+        <tr><td style="padding:11px 0;border-bottom:1px solid #dce2e2;color:#687178;">유입 페이지</td><td style="padding:11px 0;border-bottom:1px solid #dce2e2;">{{page_url}}</td></tr>
+        <tr><td style="padding:11px 0;color:#687178;">개인정보 동의</td><td style="padding:11px 0;">{{privacy_agreed}} ({{agreed_at}})</td></tr>
+      </table>
+      <div style="margin-top:24px;padding:18px;background:#dfedfa;white-space:pre-wrap;word-break:break-word;font-size:14px;"><strong>문의 내용</strong><br>{{message}}</div>
+      <a href="mailto:{{from_email}}?subject=Re:%20AI%20교육%20문의" style="display:inline-block;margin-top:24px;padding:13px 18px;background:#f36f4b;color:#fff;text-decoration:none;font-size:13px;font-weight:bold;">문의자에게 회신하기</a>
+    </div>
+    <p style="font-size:11px;color:#687178;text-align:center;margin:18px 0 0;">이 메일은 이동희 Practical AI Education 문의 폼에서 자동 발송되었습니다.</p>
+  </div>
+</body></html>
