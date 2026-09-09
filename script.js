@@ -18,7 +18,7 @@ document.querySelectorAll('.gallery-grid img').forEach((img, index) => { if (gal
 // 검색 결과와 SNS 공유에 필요한 메타·구조화 데이터를 공통으로 설정합니다.
 document.title = '이동희 ㅣ Practical AI Education';
 const meta = (name, content, property = false) => { let el = document.head.querySelector(`${property ? 'meta[property' : 'meta[name'}="${name}"]`); if (!el) { el = document.createElement('meta'); el.setAttribute(property ? 'property' : 'name', name); document.head.appendChild(el); } el.content = content; };
-meta('description', 'AI를 배우는 순간, 업무의 결과가 달라집니다. 기업·공공기관을 위한 생성형 AI, 업무자동화, AI 콘텐츠 제작, 실시간 피드백 교육.');
+meta('description', 'AI를 배우는 순간, 업무의 결과가 달라집니다. 이동희 강사는 기업·공공기관을 대상으로 초보자도 따라 할 수 있는 생성형 AI 실습 교육을 진행합니다. 업무자동화, AI 콘텐츠 제작, 프롬프트 작성과 실시간 피드백 중심의 맞춤형 교육을 제공합니다.');
 meta('og:title', '이동희 ㅣ Practical AI Education', true); meta('og:description', '기업·공공기관을 위한 실무 중심 생성형 AI 교육', true); meta('og:url', SITE_URL, true); meta('og:image', ORG_LOGO_URL, true); meta('og:type', 'website', true);
 let canonical = document.head.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); } canonical.href = SITE_URL;
 const personLd = { '@context':'https://schema.org', '@type':'Person', name:'이동희', jobTitle:'생성형 AI 실무교육 강사', url:SITE_URL, knowsAbout:['생성형AI강의','업무자동화','AI콘텐츠제작','실시간피드백'], sameAs:['https://blog.naver.com/rainyjay4s'] };
