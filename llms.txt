@@ -3,6 +3,9 @@
 
 ## 핵심 페이지
 - [메인 페이지](https://rainyjayldh.vercel.app/): 기업·공공기관을 위한 실무 중심 생성형 AI 교육과 강사 소개
+- [강사 소개](https://rainyjayldh.vercel.app/about/): 이동희 강사의 전문 분야, 자격, 교육 배경과 주요 교육 기관
+- [교육 프로그램](https://rainyjayldh.vercel.app/programs/): AI 홍보 콘텐츠 제작, 업무 효율화·자동화, 프롬프트·기획서 완성
+- [교육 문의](https://rainyjayldh.vercel.app/contact/): 기관·기업 맞춤 교육, 특강·워크숍, 교육 협업 문의
 
 ## 교육 내용
 - 생성형 AI 활용과 업무 자동화

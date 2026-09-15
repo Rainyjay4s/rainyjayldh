@@ -18,11 +18,11 @@ const galleryAlts=['컴퓨터실에서 진행하는 NotebookLM 실무 활용 교
 const heroHeading=document.querySelector('.hero h1'); if(heroHeading&&!heroHeading.querySelector('.seo-name')){const name=document.createElement('span');name.className='seo-name';name.textContent='이동희 ';name.style.cssText='position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0';heroHeading.prepend(name);}
 
 // 검색 결과와 SNS 공유에 필요한 메타·구조화 데이터를 공통으로 설정합니다.
-document.title = '이동희 ㅣ Practical AI Education';
+if (window.location.pathname === '/' || window.location.pathname === '') document.title = '이동희 ㅣ Practical AI Education';
 const meta = (name, content, property = false) => { let el = document.head.querySelector(`${property ? 'meta[property' : 'meta[name'}="${name}"]`); if (!el) { el = document.createElement('meta'); el.setAttribute(property ? 'property' : 'name', name); document.head.appendChild(el); } el.content = content; };
-meta('description', 'AI를 배우는 순간, 업무의 결과가 달라집니다. 이동희 강사는 기업·공공기관을 대상으로 초보자도 따라 할 수 있는 생성형 AI 실습 교육을 진행합니다. 업무자동화, AI 콘텐츠 제작, 프롬프트 작성과 실시간 피드백 중심의 맞춤형 교육을 제공합니다.');
-meta('og:title', '이동희 ㅣ Practical AI Education', true); meta('og:description', '기업·공공기관을 위한 실무 중심 생성형 AI 교육', true); meta('og:url', SITE_URL, true); meta('og:image', ORG_LOGO_URL, true); meta('og:type', 'website', true);
-let canonical = document.head.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); } canonical.href = SITE_URL;
+if (window.location.pathname === '/' || window.location.pathname === '') meta('description', 'AI를 배우는 순간, 업무의 결과가 달라집니다. 이동희 강사는 기업·공공기관을 대상으로 초보자도 따라 할 수 있는 생성형 AI 실습 교육을 진행합니다. 업무자동화, AI 콘텐츠 제작, 프롬프트 작성과 실시간 피드백 중심의 맞춤형 교육을 제공합니다.');
+if (window.location.pathname === '/' || window.location.pathname === '') { meta('og:title', '이동희 ㅣ Practical AI Education', true); meta('og:description', '기업·공공기관을 위한 실무 중심 생성형 AI 교육', true); meta('og:url', SITE_URL, true); meta('og:image', ORG_LOGO_URL, true); meta('og:type', 'website', true); }
+let canonical = document.head.querySelector('link[rel="canonical"]'); if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); } if (window.location.pathname === '/' || window.location.pathname === '') canonical.href = SITE_URL;
 const personLd = { '@context':'https://schema.org', '@type':'Person', name:'이동희', jobTitle:'생성형 AI 실무교육 강사', description:'기업·공공기관을 위한 실무 중심 생성형 AI 교육 강사', url:SITE_URL, image:`${SITE_URL}이동희 프로필 사진(무배경).png`, affiliation:{'@type':'Organization',name:'한국AI콘텐츠연구소',url:'https://hanconyeon.com/'}, knowsAbout:['생성형AI강의','업무자동화','AI콘텐츠제작','실시간피드백'], sameAs:['https://blog.naver.com/rainyjay4s','https://www.youtube.com/@Rainyjay4s','https://www.instagram.com/Rainyjay4s/'] };
 const courseLds = [
   { '@context':'https://schema.org','@type':'Course',name:'AI 홍보 콘텐츠 제작',description:'이미지·카드뉴스·숏폼 영상·AI 음악을 활용한 기관 및 사업 브랜딩 콘텐츠 제작 실습',provider:{'@type':'Person',name:'이동희',url:SITE_URL},audience:{'@type':'Audience',audienceType:'홍보 담당자, 마케터, 중소상공인'} },
@@ -32,7 +32,7 @@ const courseLds = [
 const faqLd = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:[['AI를 한 번도 다뤄보지 않은 초보자도 가능한가요?','가능합니다. 눈높이에 맞춘 기초부터 시작하고, 실시간 피드백으로 따라올 수 있도록 진행합니다.'],['기관 특성에 맞춰 교육 내용을 바꿀 수 있나요?','사전 미팅을 통해 업종, 실무 과제, 원하는 결과물에 맞춰 커리큘럼을 제안합니다.'],['교육 시 준비해야 할 것이 있나요?','교육 방식에 따라 개인 PC 또는 모바일 기기가 필요하며, 필요한 무료 AI 도구는 사전에 안내합니다.'],['온라인과 오프라인 모두 가능한가요?','전국 온·오프라인 출강이 가능하며, 인원 규모와 환경에 맞춰 실습 방식을 조정합니다.']].map(([name,text])=>({'@type':'Question',name,acceptedAnswer:{'@type':'Answer',text}}))};
 const contactLd = {'@context':'https://schema.org','@type':'ContactPoint',contactType:'교육 문의',telephone:'+82-10-7700-6201',email:'arainge0215@gmail.com',url:`${SITE_URL}#contact`,availableLanguage:'Korean'};
 [personLd,...courseLds,faqLd,contactLd].forEach((data)=>{const ld=document.createElement('script');ld.type='application/ld+json';ld.textContent=JSON.stringify(data);document.head.appendChild(ld)});
-meta('robots','index,follow,max-image-preview:large'); meta('author','이동희'); meta('dateModified','2026-09-09');
+meta('robots','index,follow,max-image-preview:large'); meta('author','이동희'); meta('dateModified','2026-09-15');
 
 // 한국AI콘텐츠연구소 공통 헤더·푸터를 기존 레이아웃에 추가합니다.
 const orgMarkup = `<a class="org-brand" href="https://hanconyeon.com/" target="_blank" rel="noopener"><img src="${ORG_LOGO_URL}" alt="한국AI콘텐츠연구소" onerror="this.style.display='none'"><span><strong>한국AI콘텐츠연구소</strong><small>KOREA AI CONTENTS LAB</small></span></a>`;
@@ -75,3 +75,5 @@ const style = document.createElement('style'); style.textContent = `.org-brand{d
 const emailjsScript = document.createElement('script'); emailjsScript.src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js'; emailjsScript.onload=()=>window.emailjs?.init({publicKey:EMAILJS_PUBLIC_KEY}); document.head.appendChild(emailjsScript);
 const headerScroll=document.querySelector('.site-header'); window.addEventListener('scroll',()=>headerScroll?.classList.toggle('scrolled',window.scrollY>20),{passive:true});
 const menu=document.querySelector('.menu-toggle'), nav=document.querySelector('.nav'); if(menu){menu.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);nav.style.cssText=open?'display:flex;position:absolute;top:68px;left:0;right:0;padding:22px 16px;background:#f5f7f5;flex-direction:column;gap:18px;border-bottom:1px solid #dce2e2':' ';menu.textContent=open?'CLOSE':'MENU';});}
+document.querySelectorAll('.site-header .nav a').forEach((link,index)=>{const targets=['/about/','/programs/','/contact/'];if(targets[index])link.href=targets[index];});
+document.querySelectorAll('.gallery-grid img').forEach((img)=>img.setAttribute('decoding','async'));
